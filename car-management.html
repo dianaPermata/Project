@@ -160,93 +160,91 @@
     <div class="container-fluid">
       <!-- Content Row -->
       <div class="row">
+ <!-- DataTales Car-->
+ <div class="col-lg-12">
+  <button type="button" class="btn btn-danger" style="margin:10px 5px;" data-toggle="modal" data-target="#myModalTambah"><i class="fa fa-plus"> Data Mobil</i></button><br>
 
-        <!-- DataTales Car-->
-        <div class="col-lg-12">
-          <button type="button" class="btn btn-danger" style="margin:10px 5px;" data-toggle="modal" data-target="#myModalTambah"><i class="fa fa-plus"> Data Mobil</i></button><br>
-
-          <div class="card shadow mb-4">
-            <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold">Data Mobil</h6>
-            </div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th width="5%">id</th>
-                      <th>Nama Mobil</th>
-                      <th>No Telp Driver</th>
-                      <th>Keterangan</th>
-                      <th>Aksi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-            </tbody>
-            </table>
-            </div>
-          </div>
- <!-- End DataTales Car-->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold">Data Mobil</h6>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th width="5%">id</th>
+              <th>Nama Mobil</th>
+              <th>No Telp Driver</th>
+              <th>Keterangan</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+    </tbody>
+    </table>
+    </div>
+  </div>
+<!-- End DataTales Car-->
 
 <!-- Modal -->
 <div id="myModalTambah" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <!-- konten modal-->
-    <div class="modal-content">
-      <!-- heading modal -->
-      <div class="modal-header">
-        <h4 class="modal-title">Tambah Data Mobil</h4>
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-      </div>
-      <!-- body modal -->
-      <form>
-        <div class="modal-body">
-          <!-- Nama Mobil -->
-          <div class="mb-3">
-            <label for="namaMobil">Nama Mobil :</label>
-            <input type="text" class="form-control" name="nama-mobil" id="namaMobil">
-          </div>
+<div class="modal-dialog">
+<!-- konten modal-->
+<div class="modal-content">
+<!-- heading modal -->
+<div class="modal-header">
+<h4 class="modal-title">Tambah Data Mobil</h4>
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+<!-- body modal -->
+<form>
+<div class="modal-body">
+  <!-- Nama Mobil -->
+  <div class="mb-3">
+    <label for="namaMobil">Nama Mobil :</label>
+    <input type="text" class="form-control" name="nama-mobil" id="namaMobil">
+  </div>
 
-          <!-- No Telp Driver -->
-          <div class="mb-3">
-            <label for="telepon">No Telp Driver :</label>
-            <input type="tel" class="form-control" name="telepon" id="telepon" pattern="[0-9]{10,15}">
-          </div>
+  <!-- No Telp Driver -->
+  <div class="mb-3">
+    <label for="telepon">No Telp Driver :</label>
+    <input type="tel" class="form-control" name="telepon" id="telepon" pattern="[0-9]{10,15}">
+  </div>
 
-          <!-- Keterangan -->
-          <div class="mb-3">
-            <label for="keterangan">Keterangan :</label>
-            <textarea class="form-control" name="ket" id="keterangan" rows="4"></textarea>
-          </div>
+  <!-- Keterangan -->
+  <div class="mb-3">
+    <label for="keterangan">Keterangan :</label>
+    <textarea class="form-control" name="ket" id="keterangan" rows="4"></textarea>
+  </div>
 
-          <!-- Image upload input -->
-          <div class="mb-3">
-            <label for="gambarUpload">Pilih Gambar/Foto:</label>
-            <input type="file" class="form-control" name="gambar" id="gambarUpload" accept="image/*">
-          </div>
-          
-          <!-- Box to display the selected image -->
-          <div id="imagePreview" style="margin-top: 10px; display: none;">
-            <h6>Preview Gambar:</h6>
-            <img id="previewImage" src="" alt="Image preview" style="max-width: 100%; max-height: 200px; border: 1px solid #ddd; padding: 5px;">
-          </div>
-        </div>
-        <!-- footer modal -->
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-danger">Simpan</button>
-        </form>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-      </div>
-    </div>
+  <!-- Image upload input -->
+  <div class="mb-3">
+    <label for="gambarUpload">Pilih Gambar/Foto:</label>
+    <input type="file" class="form-control" name="gambar" id="gambarUpload" accept="image/*">
+  </div>
+  
+  <!-- Box to display the selected image -->
+  <div id="imagePreview" style="margin-top: 10px; display: none;">
+    <h6>Preview Gambar:</h6>
+    <img id="previewImage" src="" alt="Image preview" style="max-width: 100%; max-height: 200px; border: 1px solid #ddd; padding: 5px;">
   </div>
 </div>
+<!-- footer modal -->
+<div class="modal-footer">
+  <button type="submit" class="btn btn-danger">Simpan</button>
+</form>
+<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
+</div>
+</div>
+</div>
+</div>
 
 </div>
 
+
         </div>
       </div>
-
-
     </div>
     <!-- /.container-fluid -->
 
@@ -256,8 +254,6 @@
   </div>
   <!-- End of Content Wrapper -->
 
-  </div>
-  <!-- End of Page Wrapper -->
 
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
