@@ -10,7 +10,7 @@
   <meta name="author" content="">
 
   <link rel="shortcut icon" href="">
-  <title>Car Management | Booking App</title>
+  <title>Car Booking | Booking App</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -159,89 +159,95 @@
     <!-- Begin Page Content -->
     <div class="container-fluid">
       <!-- Content Row -->
-      <div class="row">
- <!-- DataTales Car-->
- <div class="col-lg-12">
-  <button type="button" class="btn btn-danger" style="margin:10px 5px;" data-toggle="modal" data-target="#myModalTambah"><i class="fa fa-plus"> Data Mobil</i></button><br>
+      <div class="row"><div class="container-fluid">
 
-  <div class="card shadow mb-4">
-    <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold">Data Mobil</h6>
-    </div>
-    <div class="card-body">
-      <div class="table-responsive">
-        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-          <thead>
-            <tr>
-              <th width="5%">id</th>
-              <th>Nama Mobil</th>
-              <th>No Telp Driver</th>
-              <th>Keterangan</th>
-              <th>Aksi</th>
-            </tr>
-          </thead>
-          <tbody>
-    </tbody>
-    </table>
-    </div>
-  </div>
-<!-- End DataTales Car-->
+        <!-- Form Booking -->
+        <div class="card shadow mb-4">
+          <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold">Form Booking Mobil</h6>
+          </div>
+          <div class="card-body">
+            <form id="formBooking" method="POST" action="">
+              <div class="row">
+                <!-- Left Section -->
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label for="namaMobil">Nama Mobil :</label>
+                    <select class="form-control" id="namaMobil" name="namaMobil" required>
+                      <option value="" disabled selected>Pilih Mobil</option>
+                      <!-- Options will be dynamically filled using JavaScript -->
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="noTelpDriver">No Telp Driver :</label>
+                    <input type="text" class="form-control" id="noTelpDriver" name="noTelpDriver" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label for="namaPic">Nama PIC :</label>
+                    <input type="text" class="form-control" id="namaPic" name="namaPic" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="waktuMulai">Waktu Mulai :</label>
+                    <input type="datetime-local" class="form-control" id="waktuMulai" name="waktuMulai" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="waktuSelesai">Waktu Selesai :</label>
+                    <input type="datetime-local" class="form-control" id="waktuSelesai" name="waktuSelesai" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="keterangan">Keterangan :</label>
+                    <textarea class="form-control" id="keterangan" name="keterangan" rows="3"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-danger">Simpan</button>
+                </div>
+      
+                <!-- Right Section -->
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="gambarMobil">Gambar/Foto :</label>
+                    <img id="gambarMobil" src="img/pic-login.jpg" alt="Gambar Mobil" class="img-fluid border">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
 
-<!-- Modal -->
-<div id="myModalTambah" class="modal fade" role="dialog">
-<div class="modal-dialog">
-<!-- konten modal-->
-<div class="modal-content">
-<!-- heading modal -->
-<div class="modal-header">
-<h4 class="modal-title">Tambah Data Mobil</h4>
-<button type="button" class="close" data-dismiss="modal">&times;</button>
-</div>
-<!-- body modal -->
-<form>
-<div class="modal-body">
-  <!-- Nama Mobil -->
-  <div class="mb-3">
-    <label for="namaMobil">Nama Mobil :</label>
-    <input type="text" class="form-control" name="nama-mobil" id="namaMobil">
-  </div>
+      <!-- End Form Booking -->
 
-  <!-- No Telp Driver -->
-  <div class="mb-3">
-    <label for="telepon">No Telp Driver :</label>
-    <input type="tel" class="form-control" name="telepon" id="telepon" pattern="[0-9]{10,15}">
-  </div>
+        <!-- DataTales Room-->
+        <div class="col-lg-12">
 
-  <!-- Keterangan -->
-  <div class="mb-3">
-    <label for="keterangan">Keterangan :</label>
-    <textarea class="form-control" name="ket" id="keterangan" rows="4"></textarea>
-  </div>
-
-  <!-- Image upload input -->
-  <div class="mb-3">
-    <label for="gambarUpload">Pilih Gambar/Foto:</label>
-    <input type="file" class="form-control" name="gambar" id="gambarUpload" accept="image/*">
-  </div>
-  
-  <!-- Box to display the selected image -->
-  <div id="imagePreview" style="margin-top: 10px; display: none;">
-    <h6>Preview Gambar:</h6>
-    <img id="previewImage" src="" alt="Image preview" style="max-width: 100%; max-height: 200px; border: 1px solid #ddd; padding: 5px;">
-  </div>
-</div>
-<!-- footer modal -->
-<div class="modal-footer">
-  <button type="submit" class="btn btn-danger">Simpan</button>
-</form>
-<button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-</div>
-</div>
-</div>
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold">Data Booking Mobil</h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th width="5%">id</th>
+                      <th style="text-align: center; vertical-align: middle;">Waktu Booking</th>
+                      <th style="text-align: center; vertical-align: middle;">Nama Mobil</th>
+                      <th style="text-align: center; vertical-align: middle;">No Telp Driver</th>
+                      <th style="text-align: center; vertical-align: middle;">Nama PIC</th>
+                      <th style="text-align: center; vertical-align: middle;">Waktu Mulai</th>
+                      <th style="text-align: center; vertical-align: middle;">Waktu Selesai</th>
+                      <th style="text-align: center; vertical-align: middle;">Keterangan</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+            </tbody>
+            </table>
+            </div>
+          </div>
+ <!-- End DataTales Room-->
+     
 </div>
 
 </div>
-
 
         </div>
       </div>
@@ -260,23 +266,7 @@
     <i class="fas fa-angle-up"></i>
   </a>
 
-
-  <script>
-  // Preview image when selected
-  document.getElementById('gambarUpload').addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function(event) {
-        document.getElementById('previewImage').src = event.target.result;
-        document.getElementById('imagePreview').style.display = 'block';
-      };
-      reader.readAsDataURL(file);
-    }
-  });
-</script>
-
-
+  
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
